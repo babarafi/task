@@ -1,0 +1,16 @@
+<p>Pinned repositories</p>
+<div *ngIf="items" class="col-md-12">
+  <div class="col-md-6" style="margin: 0px 0px 5px 0px" *ngFor="let data of items ;  let ind = index">
+    <div *ngIf="ind < 4" class="col-md-12" style="padding: 5px 5px 5px 5px ; border: solid 2px rgba(224, 224, 224, 0.33); margin-right: -10px;  height: 130px;">
+      <h2><a href="{{data.html_url}}">{{data.name}}</a></h2>
+      <p [innerHTML]="data.description"></p>
+      <p>
+        <span><md-icon>album</md-icon> {{data.language}}</span>
+        <span><md-icon>start</md-icon><a href="{{data.stargazers_url}}"> {{data.stargazers_count}}</a></span>
+        <span><md-icon>shared</md-icon>{{data.fork}}</span>
+        <span> Update On {{data.updated_at | date:fullDate}}</span>
+      </p>
+    </div>
+  </div>
+  <div><a href="  https://github.com/users/andhikamaheva/contributions?from=2017-07-31&to=2017-08-02&full_graph=1"></a></div>
+</div>

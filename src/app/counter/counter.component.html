@@ -1,0 +1,17 @@
+<p>
+  counter works!
+</p>
+
+<button type="button" (click)="increment()">Increment</button>
+<input type="text" [value]="count">
+<button type="button" (click)="decrement()">Decrement</button>
+<hr>
+<ul *ngIf="items">
+  <li *ngFor="let data of items">
+   {{data}}
+  </li>
+</ul>
+
+<div *ngIf="!items">
+  <span>{{result | lowercase}}</span>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <label>Nama</label>
+        <input type="text" formControlName="name">
+      </div>
+      <div class="row">
+        <label>Email</label>
+        <input type="email" formControlName="email">
+      </div>
+      <div class="row">
+        <label>Password</label>
+        <input type="text" formControlName="password">
+      </div>
+      <div class="row">
+       <button type="submit" (click)="onSubmit()">Save</button>
+      </div>
+      
+  </form>
+</div>

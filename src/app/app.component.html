@@ -1,0 +1,16 @@
+<!--<md-card>-->
+  <div>
+  <div class="col-md-3">
+    <app-profile></app-profile>
+  </div>
+  <div class="col-md-9">
+    <button md-button><a [routerLink]="['/']">Overview</a></button>
+    <button md-button><a [routerLink]="['/Stars']">Stars</a></button>
+    <button md-button><a [routerLink]="['/Repositories']">Repositories</a></button>
+    <button md-button><a [routerLink]="['/Follower']">Follower</a></button>
+    <button md-button><a [routerLink]="['/Following']">Following</a></button>
+
+    <router-outlet></router-outlet>
+  </div>
+  </div>
+<!--</md-card>-->

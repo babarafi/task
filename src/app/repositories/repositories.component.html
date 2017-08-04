@@ -1,0 +1,30 @@
+<div>
+   <md-input-container>
+      <input mdInput  value="search repositories ...">
+    </md-input-container>
+
+    <!--<md-select placeholder="Type">
+  <md-option *ngFor="let types of type" [value]="types.value">
+    {{ types.viewValue }}
+  </md-option>
+</md-select>-->
+    <br>
+  <div class="col-md-4">
+    <!--<input class="mdl-textfield__input" #fbKeyword size="16" type="text" (keyup.enter)="onFindClick(fbKeyword.value)">-->
+  </div>
+  <div *ngIf="items">
+    <div *ngFor="let data of items ;  let ind = index ">
+      <div *ngIf="ind < 4">
+        <h2><a href="{{data.html_url}}">{{data.name}}</a></h2>
+        <p [innerHTML]="data.description"></p>
+        <p>
+          <span><md-icon>album</md-icon> {{data.language}}</span>
+          <span><md-icon>start</md-icon><a href="{{data.stargazers_url}}"> {{data.stargazers_count}}</a></span>
+          <span><md-icon>shared</md-icon>{{data.fork}}</span>
+          <span> Update On {{data.updated_at | date:fullDate}}</span>
+        </p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>

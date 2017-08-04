@@ -1,0 +1,30 @@
+<div class="col-md-12">
+  <div class="row" style="text-align:center;">
+
+    <img src="{{items.avatar_url}}" class="" style="max-height:220px; width: 99%; padding-top: 15px;" />
+
+    <dl>
+      <p style="text-align: center;font-weight:bold;" [innerHTML]="items.name"></p>
+      <p>
+        <small style="text-align: center; color:#808080">{{items.login}}</small>
+      </p>
+      <p style="text-align: justify;"><span [innerHTML]="items.bio"></span></p>
+    </dl>
+    <md-button-toggle mdTooltip="Follow" style="width:100%">Follow</md-button-toggle>
+  </div>
+
+  <hr>
+  <!--<button md-button (click)="openDialog()">Block or Report Membe</button>-->
+  <hr>
+
+  <md-icon>share</md-icon><a href="https://developer.github.com/"> Developer Program Member </a>
+  <hr>
+  <p>
+    <md-icon>person</md-icon><a href="https://github.com/yousell"> {{items.company}}</a></p>
+  <p>
+    <md-icon>room</md-icon><a> {{items.location}} </a></p>
+  <p>
+    <md-icon>email</md-icon><a> {{items.login}}}.gmail.com</a></p>
+  <p>
+    <md-icon>web</md-icon><a> {{items.blog}}}</a></p>
+</div>

@@ -1,0 +1,15 @@
+<div *ngIf="items">
+<div *ngFor="let data of items ;  let ind = index " >
+    <div *ngIf="ind < 4"> 
+<h2><a href="{{data.html_url}}" >{{data.full_name}}</a></h2>
+<p [innerHTML]="data.description"></p>
+<p>
+    <span><md-icon>album</md-icon> {{data.language}}</span>
+    <span><md-icon>start</md-icon><a href="{{data.stargazers_url}}"> {{data.stargazers_count}}</a></span>
+    <span><md-icon>shared</md-icon>{{data.fork}}</span>
+    <span> Update On {{data.updated_at | date:fullDate}}</span>
+</p>
+<hr>
+    </div>
+</div>
+</div>
